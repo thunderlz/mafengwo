@@ -22,7 +22,7 @@ with open('mdd.csv','wt') as f:
             path_mdd_ziyouxing=path+mdd+'/自由行攻略'
             for ziyouxing in os.listdir(path_mdd_ziyouxing):
                 with open(path_mdd_ziyouxing+'/'+ziyouxing+'/'+ziyouxing+'.html') as ziyouxing_file:
-                    bs = BeautifulSoup(ziyouxing_file.read(),'lxml')
+                    bs = BeautifulSoup(ziyouxing_file.read(),'html5lib')
                 print(path_mdd_ziyouxing+'/'+ziyouxing)
                 if bs.find_all('span', {'class': 'time'}):
                     ziyouxing_date = bs.find_all('span',{'class':'time'})[1].em.string
@@ -46,7 +46,7 @@ with open('mdd.csv','wt') as f:
             path_mdd_youji = path + mdd + '/游记'
             for youji in os.listdir(path_mdd_youji):
                 with open(path_mdd_youji+'/'+youji+'/'+youji+'.html') as youji_file:
-                    bs = BeautifulSoup(youji_file.read(),'lxml')
+                    bs = BeautifulSoup(youji_file.read(),'html5lib')
                 print(path_mdd_youji+'/'+youji)
                 # print(bs)
                 if bs.find('li', {'class': 'time'}):
