@@ -2,6 +2,7 @@ import csv
 import glob
 import os
 from bs4 import BeautifulSoup
+import numpy as np
 import pandas as pd
 
 with open('mdd.csv','wt') as f:
