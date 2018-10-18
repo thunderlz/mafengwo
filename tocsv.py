@@ -10,7 +10,6 @@ with open('mdd.csv','wt') as f:
     path='/Volumes/My Passport/目的地/'
     # path = './目的地/'
     # 我又在这里加上一句话
-    # 我还是在这里加一句话
     mdd_list=os.listdir(path)
     print('一共有{}个目的地:'.format(len(mdd_list)),mdd_list)
     for mdd in mdd_list:
