@@ -7,8 +7,8 @@ import pandas as pd
 with open('mdd.csv','wt') as f:
     csvwriter=csv.writer(f)
     csvwriter.writerow(['目的地','类别','文章名称','日期','收藏','分享'])
-    # path='/Volumes/My Passport/目的地/'
-    path = './目的地/'
+    path='/Volumes/My Passport/目的地/'
+    # path = './目的地/'
     mdd_list=os.listdir(path)
     print('一共有{}个目的地:'.format(len(mdd_list)),mdd_list)
     for mdd in mdd_list:
