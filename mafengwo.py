@@ -24,7 +24,7 @@ headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleW
 s=requests.session()
 
 for p in range(100,1000):
-    try:
+    # try:
         url='http://www.mafengwo.cn/gonglve/'
         params={'page':p}
         rq=s.post(url,headers=headers,data=params)
@@ -39,7 +39,7 @@ for p in range(100,1000):
 
         for a in bs.find_all('a',{'href':re.compile('https*://www.mafengwo.cn/.*')}):
             # print(link)
-            try:
+            # try:
                 link=a.attrs['href']
                 print(link)
                 rq=requests.get(link)
@@ -87,11 +87,11 @@ for p in range(100,1000):
                             print('错误图片链接{}'.format(img))
                 else:
                     print('已经下载')
-            except:
-                print('错误目的地链接{}'.format(a))
+            # except:
+            #     print('错误目的地链接{}'.format(a))
 
-    except:
-        print('错误页码{}'.format(p))
+    # except:
+    #     print('错误页码{}'.format(p))
 
 
 
