@@ -64,8 +64,9 @@ for p in range(100,1000):
                 if not os.path.exists(path+'目的地/{}/{}/'.format(target,title)):
                     os.mkdir(path+'目的地/{}/{}/'.format(target,title))
                     with open(path+'目的地/{}/{}/{}.html'.format(target,title,title), 'wt') as f:
-                        pass
-                        # print(rq.text,file=f)
+                        # pass
+                        rq.encoding='utf-8'
+                        print(rq.text,file=f)
                         # print(bs.find_all('img'))
 
                     for img in bs.find_all('img'):
