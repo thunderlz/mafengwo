@@ -9,7 +9,7 @@ with open('mdd.csv','wt') as f:
     csvwriter.writerow(['目的地','类别','文章名称','日期','收藏','分享'])
     path='/Volumes/My Passport/目的地/'
     # path = './目的地/'
-    # 我又在这里加上一句话
+    # 我又在这里加上一句话6
     #这边也加了呢（win）、
     # aaaaaaa
     mdd_list=os.listdir(path)

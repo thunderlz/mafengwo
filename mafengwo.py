@@ -9,7 +9,7 @@ def validateTitle(title):
     rstr = r"[\/\\\:\*\?\"\<\>\|]"  # '/ \ : * ? " < > |'
     new_title = re.sub(rstr, "_", title)  # 替换为下划线
     return new_title
-path='/Volumes/My Passport/'
+path='./'
 
 if not os.path.exists(path+'目的地/'):
     os.mkdir(path+'目的地')
