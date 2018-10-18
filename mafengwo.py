@@ -28,7 +28,7 @@ for p in range(100,1000):
         url='http://www.mafengwo.cn/gonglve/'
         params={'page':p}
         rq=s.post(url,headers=headers,data=params)
-        bs=BeautifulSoup(rq.text,'lxml')
+        bs=BeautifulSoup(rq.text,'html5lib')
         #创建目录
 
         # if not os.path.exists('./目的地/{}/'.format(p)):
@@ -43,7 +43,7 @@ for p in range(100,1000):
                 link=a.attrs['href']
                 print(link)
                 rq=requests.get(link)
-                bs=BeautifulSoup(rq.text,'lxml')
+                bs=BeautifulSoup(rq.text,'html5lib')
                 title=validateTitle(bs.title.string)[0:30]
                 # 创建目录
                 # j = json.loads(bs.script.string[14:-2])
