@@ -23,7 +23,7 @@ headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleW
 # url='http://www.mafengwo.cn/gonglve/ziyouxing/77110.html'
 s=requests.session()
 
-for p in range(100,1000):
+for p in range(1,5000):
     try:
         url='http://www.mafengwo.cn/gonglve/'
         params={'page':p}
