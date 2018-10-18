@@ -44,7 +44,7 @@ for p in range(100,1000):
                 print(link)
                 rq=requests.get(link)
                 bs=BeautifulSoup(rq.text,'html5lib')
-                title=validateTitle(bs.title.string)[0:30]
+                title=validateTitle(bs.title.string)[0:10]#创建目录10位
                 # 创建目录
                 # j = json.loads(bs.script.string[14:-2])
                 if bs.find('a', {'href': re.compile('/gonglve/ziyouxing/.*')}):
